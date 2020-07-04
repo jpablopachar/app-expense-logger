@@ -16,11 +16,7 @@ import { BudgetModule } from '../budget/budget.module';
     IonicModule,
     CommonModule,
     FormsModule,
-    TabsPageRoutingModule,
-    /* DashboardModule,
-    AccountModule,
-    ActivityModule,
-    BudgetModule */
+    TabsPageRoutingModule
   ],
   declarations: [TabsPage]
 })
