@@ -4,3 +4,45 @@
     <ion-button slot="end" fill="outline" (click)="dismissModal()">X</ion-button>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <form [formGroup]="addExpenseForm">
+    <ion-item>
+      <ion-input type="number" placeholder="Cantidad" formControlName="amount"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea type="text" placeholder="Descripción" formControlName="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Seleccionar tipo</ion-label>
+      <ion-select value="" okText="Ok" cancelText="Cancel" interface="popover" formControlName="type">
+        <ion-select-option value="Games">Juegos</ion-select-option>
+        <ion-select-option value="Movies">Películas</ion-select-option>
+        <ion-select-option value="Sports">Deportes</ion-select-option>
+        <ion-select-option value="Dining out">Cenar afuera</ion-select-option>
+        <ion-select-option value="Groceries">Comestibles</ion-select-option>
+        <ion-select-option value="Electronics">Electrónicos</ion-select-option>
+        <ion-select-option value="Furniture">Muebles</ion-select-option>
+        <ion-select-option value="Maintenance">Mantenimiento</ion-select-option>
+        <ion-select-option value="Mortgage">Hipotetica</ion-select-option>
+        <ion-select-option value="Pets">Máscotas</ion-select-option>
+        <ion-select-option value="Rent">Rentas</ion-select-option>
+        <ion-select-option value="Services">Servicios</ion-select-option>
+        <ion-select-option value="Clothing">Ropa</ion-select-option>
+        <ion-select-option value="Gifts">Regalos</ion-select-option>
+        <ion-select-option value="Insurance">Seguro</ion-select-option>
+        <ion-select-option value="Medical">Médicos</ion-select-option>
+        <ion-select-option value="Taxes">Impuestos</ion-select-option>
+        <ion-select-option value="General">General</ion-select-option>
+        <ion-select-option value="Cleaning">Limpieza</ion-select-option>
+        <ion-select-option value="Electricity">Electricidad</ion-select-option>
+        <ion-select-option value="Gas">Gas</ion-select-option>
+        <ion-select-option value="Internet">Internet</ion-select-option>
+        <ion-select-option value="Mobile">Móvil</ion-select-option>
+        <ion-select-option value="Water">Agua</ion-select-option>
+        <ion-select-option value="Others">Otro</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <br>
+    <ion-button color="primary" fill="solid" expand="block" size="large" (click)="createExpense()" [disabled]="!addExpenseForm.valid">Agregar</ion-button>
+  </form>
+</ion-content>
